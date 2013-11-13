@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4cbc617-d737-4929-83a0-20af2884ced1" name="Default" comment="" />
+    <list default="true" id="a4cbc617-d737-4929-83a0-20af2884ced1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basov.html" afterPath="$PROJECT_DIR$/basov.html" />
+    </list>
     <ignored path="lesson 1.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +28,7 @@
       <file leaf-file-name="basov.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/basov.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="114" selection-end="114" vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="525">
+            <state line="9" column="15" selection-start="181" selection-end="181" vertical-scroll-proportion="0.25714287" vertical-offset="0" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
@@ -48,13 +50,21 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/basov.html" />
         <option value="$PROJECT_DIR$/script.js" />
+        <option value="$PROJECT_DIR$/basov.html" />
       </list>
     </option>
   </component>
@@ -86,7 +96,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -268,7 +278,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/basov.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="114" selection-end="114" vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="525">
+        <state line="9" column="15" selection-start="181" selection-end="181" vertical-scroll-proportion="0.25714287" vertical-offset="0" max-vertical-offset="525">
           <folding />
         </state>
       </provider>
