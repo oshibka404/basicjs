@@ -2,27 +2,46 @@
  * Created by lbasov on 13.11.13.
  */
 
-function failAuth () {
-    alert("Auth failed!");
+var loginAttemptCounter = constructLoginCounter();
+
+
+function constructLoginCounter() {
+    var logincounter = 0;
+
+    return {
+        increase: function() {
+            return logincounter++;
+        },
+
+        count: function() {
+            return logincounter;
+        }
+    }
 }
 
-function startAuth() {
+function auth() {
     var trueLogin = "secret_login";
     var truePassword = "secret_password";
+    var maxAuthAttempts = 5;
     var login, password;
 
-    login = prompt("Enter login?");
-    if( login === trueLogin ){
-        password = prompt("Bingo! Enter password?");
-        if(password === truePassword){
-            alert('secret info');
-        }else {
-            failAuth();
+    if(loginAttemptCounter.count() < maxAuthAttempts ){
+        login = prompt("Enter login?");
+        if( login === trueLogin ){
+            password = prompt("Enter password?");
+            if(password === truePassword){
+                alert('secret info');
+            }else {
+                loginAttemptCounter.increase();
+                alert("Password is invalid!");
+            }
+        } else {
+            loginAttemptCounter.increase();
+            alert("Login is invalid!");
         }
-    }else {
-        failAuth();
+    } else {
+        alert('Max login attempts are exceeded!');
     }
-
 }
 
 
