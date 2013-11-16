@@ -1,43 +1,22 @@
-var log = 'Cvet',
-	par = '1234';
-var log1 = prompt('Введите log');
+п»їvar log = 'Cvet',
+	par = '1234',
+	n = 5;
+var log1 = prompt('Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ.');
 if (log == log1){
-var par1 = prompt('Введите par');
-if  (par == par1){
-alert('secret');
+	var i=1;
+	while (i<=n){
+		var par1 = prompt('Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ.');
+		if  (par == par1){
+			alert('РЎРµРєСЂРµС‚РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ.');
+			break;
+		}		
+		if (i==n){
+			alert('РћС‚РєР°Р· Р°РІС‚РѕСЂРёР·Р°С†РёРё. РќРµ РІРµСЂРЅС‹Р№ РїР°СЂРѕР»СЊ.');
+		}
+		else alert('РќРµ РІРµСЂРЅС‹Р№ РїР°СЂРѕР»СЊ. РџРѕРїС‹С‚РѕРє РѕСЃС‚Р°Р»РѕСЃСЊ '+ (n-i)+'.');	
+		i++;	
+	}
 }
-else alert('отказ');
-}
-else alert('отказ');
-/*var age = prompt('ск вам лет?');
-if (age===18){
-alert ('вам 18');
-}*/
+else alert('РћС‚РєР°Р· Р°РІС‚РѕСЂРёР·Р°С†РёРё. РќРµ РІРµСЂРЅС‹Р№ Р»РѕРіРёРЅ.');
 
-/*var t = "34",
-	s = "5";
-alert (typeof(t));
-alert (typeof(null));
-alert("string".len);
-alert(parseInt(t)-parseInt(s));*/
-/*var st = prompt("как дела");
-alert("у тебя все"+s);
-var s = 'колбаса';
-	t = s-1,//нан
-	i=1/0,// инфинити
-	i2=-1/0;// - инфинити
-//console.log(s);
-s=4;
-alert(s);
-alert(t);
-alert(i);
-alert(i2);
-console.log(t>0);
-console.log(t<0);*/
-// null, undefind
-/*foo();
-function foo() {
-s = 'in func';
-}
-alert(s);*/
 
