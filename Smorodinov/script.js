@@ -2,23 +2,24 @@
 autorization();
 
 function autorization(){
+	var count = 5;
 	outer: while (true) {
 
 		var login = prompt("Введите логин:");
 		if (login == "login") {
-			for (i = 0; i < 5; i++){
+			for (i = 0; i < count; i++){
 				var pass = prompt("Введите пароль:");
 				if (pass == "password") {
-					alert("Суперсекретная информация");
+					document.write("<h1>Суперсекретная информация</h1>");
 					break outer;
 				}
 				else{
-					if (i == 4){
+					if (i == (count - 1)){
 						alert("Вам отказано в авторизации");
 						break outer;
 					}
 					else{
-						alert("Пароль неверен, осталось попыток: " + (4 - i));
+						alert("Пароль неверен, осталось попыток: " + (count - 1 - i));
 					}
 				}
 			}
