@@ -34,10 +34,12 @@ function auth() {
             }else {
                 loginAttemptCounter.increase();
                 alert("Password is invalid!");
+                auth();
             }
         } else {
             loginAttemptCounter.increase();
             alert("Login is invalid!");
+            auth();
         }
     } else {
         alert('Max login attempts are exceeded!');
