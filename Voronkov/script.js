@@ -1,12 +1,30 @@
 var	
-    default_login = "admin",
-    default_pwd = "admin",
+    default_login_1 = "admin",
+    default_pwd_1 = "admin",
+    default_login_2 = "ad",
+    default_pwd_2 = "ad",
+    default_login_3 = "adm",
+    default_pwd_3 = "adm",
     entered_login = prompt("Введите имя пользователя");
 
-if (entered_login == default_login) {
+switch (entered_login) {
+    case default_login_1: 
+        logon(default_pwd_1);
+        break;
+    case default_login_2:
+        logon(default_pwd_3);
+        break;
+    case default_login_3:
+        logon(default_pwd_3);
+        break;
+    default:
+        alert("Неверное имя пользователя");
+};
+
+function logon(pwd) {
 	var entered_pwd = prompt("Введите пароль");
         for(var i=4; i>0; i--) {
-            if (entered_pwd == default_pwd) {
+            if (entered_pwd == pwd) {
 		alert("Ты таки взломал систему, мегахакер!");
                 break;
             } else {entered_pwd = prompt("Неверный пароль. Попробуйте ещё раз. Осталось попыток - "+i);} 
@@ -15,10 +33,9 @@ if (entered_login == default_login) {
         if (i==0) {
             alert("Отказано в доступе!");
         }
-} else {alert("Неверное имя пользователя");}
+}
 
-
-/*	
+/*111	
 & and
 | or
 ^ xor
