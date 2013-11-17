@@ -19,10 +19,10 @@ for (i=0; i<5; i++)
 		}
 	}
 	if (i>=4) {alert ('Ошибка авторизации');}
-
+	if (pass=='321') break;
 	if (n>=4) break;
 }
-if (pass=='321') break;	
+	if (pass=='321') break;
 } 
 
 
