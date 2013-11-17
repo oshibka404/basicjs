@@ -6,11 +6,11 @@ function autorization(){
 	outer: while (true) {
 
 		var login = prompt("Введите логин:");
-		if (login == "login") {
+		if ((login == "login") ||(login == "admin") || (login == "mylogin")) {
 			for (i = 0; i < count; i++){
 				var pass = prompt("Введите пароль:");
 				if (pass == "password") {
-					document.write("<h1>Суперсекретная информация</h1>");
+					check(login);
 					break outer;
 				}
 				else{
@@ -28,5 +28,21 @@ function autorization(){
 			alert("Такой логин не зарегистрирован");
 		}
 
+	}
+}
+
+function check(login){
+	switch(login) {
+		case "login":
+			document.write("<h1>Суперсекретная информация</h1>");
+			break;
+		case "admin":
+			document.write("<h1>Извини, но ты ошибся номером</h1>");
+			break;
+		case "mylogin":
+			document.write("<h1>It's a trap!</h1>");
+			break;
+		default:
+			break;
 	}
 }
