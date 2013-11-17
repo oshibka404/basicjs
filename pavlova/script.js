@@ -45,21 +45,32 @@ else if(age === "18")
 
 function avtorization() {
 	var login,
-		password;
+		password,
+		count = 0;
 		
 	login = prompt("login:");
-
-	if (typeof login == "string" & login == "user"){
-		password = prompt("password:");
-		
-		if (typeof login == "string" & password == "12345")
-			alert("secret");
-		else {
-			alert("!ERROR password incorrect");
-			return;
-		}
+	
+	if (login == "manager" || login == "developer" || login == "user") {
+		while (password != "12345" && ++count <= 5)
+			password = prompt("password:");
+			
+		if (password == "12345")
+			switch (login)
+			{
+				case "manager":
+					alert("big secret");
+					break;
+				case "developer":
+					alert("medium secret");
+					break;
+				case "user":
+					alert("small secret");
+					break;
+			}
+		else
+			alert("!ERROR: password incorrect");
 	} else
-		alert("!ERROR login incorrect");
+		alert("!ERROR: login incorrect");
 };
 
 avtorization();
