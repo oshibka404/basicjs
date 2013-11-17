@@ -12,13 +12,13 @@ function autorization(){
 
 	outer: while (true) {
 
-		var log = prompt("Введите логин:");
-		if (log in database) {
+		var login = prompt("Введите логин:");
+		if (database[login] !== undefined) {
 			for (i = 0; i < count; i++){
 				var pass = prompt("Введите пароль:");
 
-				if (database[log] = pass) {
-					check(log);	
+				if (database[login] == pass) {
+					check(login);	
 					break outer;
 				}
 				else{
