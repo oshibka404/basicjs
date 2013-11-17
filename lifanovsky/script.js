@@ -1,17 +1,14 @@
 var login = prompt("Введите логин");
 if(login == "spiderman") {
-    for(var i=0; i<5; i++) {
+    metka:for(var i=0; i<5; i++) {
         var pass = prompt("Введите пароль");
-        var check = false;
         switch(pass) {
             case "asdzxc":
                 alert("Даешь супергерою секретную инфу!");
-                check = true;
-            break;
+                break metka;
             case "123":
                 alert("Тоже даешь супергерою секретную инфу!");
-                check = true;
-            break;
+                break metka;
             default:
                 if(4-i==0) {
                     alert("Попыток больше нет :(");
@@ -19,7 +16,6 @@ if(login == "spiderman") {
                     alert("Количество попыток: "+(4-i));
                 }
         }
-        if(check) break;
     }
 } else {
     alert("Нет доступа!");
