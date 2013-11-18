@@ -12,7 +12,7 @@ function autorization(){
 
 	outer: while (true) {
 
-		var login = prompt("Введите логин: ");
+		var login = prompt("Введите Ваш логин: ");
 		if (database[login] !== undefined) {
 			for (i = 0; i < count; i++){
 				var pass = prompt("Введите пароль: ");
