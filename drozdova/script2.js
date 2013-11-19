@@ -16,10 +16,10 @@ var foo = function(arr) {
    for (i=0; i<arr.length; i++) {
                 if (!arr[i].splice) {
                      a += arr[i]+", ";}
-        else {
+		else {
                         for (k=0; k<arr[i].length; k++) {
                                 if (!arr[i][k].splice) {
-                                                             a += arr[i][k]+", ";}
+                                      a += arr[i][k]+", ";}
                                 else {
                                         for (j=0; j<arr[i][k].length; j++) {
                                                 if (!arr[i][k][j].splice) {
