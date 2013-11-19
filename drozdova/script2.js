@@ -4,7 +4,7 @@ var foo = function(arr) {
     var i=0, a="Something: "; //перед началом каждого массива возвращается a, ее возможно оттуда убрать каким-то способом, чтобы было как в циклах ниже?
     for(i;i<arr.length;i++) { 
 		if (!arr[i].splice) {a += arr[i]+", ";}
-        else {a += foo(arr[i]);}; 
+        	else {a += foo(arr[i]);}; 
     };
 return a;
 };
