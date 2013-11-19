@@ -18,7 +18,7 @@ switch (login) {
 		alert("логин неверен");
 		break
 };
-if (login==login1) {
+if (login==login1 || login==login2 || login==login3) {
         while (userpassword!=password && i<5) {
                 var userpassword=prompt("Введите пароль");
                 i++;
@@ -29,27 +29,6 @@ if (login==login1) {
                 else { alert("Неверный пароль");
                 }                        
 };
-if (login==login2) {
-        while (userpassword!=password && i<5) {
-                var userpassword=prompt("Введите пароль");
-                i++;
-                };
-                if (password==userpassword) {
-                        alert("секретная инфа: логин " + login + ", пароль " + password);
-                }
-                else { alert("Неверный пароль");
-                }                        
-};
-if (login==login3) {
-        while (userpassword!=password && i<5) {
-                var userpassword=prompt("Введите пароль");
-                i++;
-                };
-                if (password==userpassword) {
-                        alert("секретная инфа: логин " + login + ", пароль " + password);
-                }
-                else { alert("Неверный пароль");
-                }                        
-};
+
 
 	
