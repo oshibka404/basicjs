@@ -1,55 +1,45 @@
 var login1="Nastya";
-var login2="Katya";
-var login3="Natasha"
+var login2="Masha";
+var login3="Dasha"
 var login = prompt("Ввведите имя")
 var password="qwerty123";
 var i=0;
 switch (login) {
 	case login1:
-	alert("Логин хороший");
+	 while (userpassword!=password && i<5) {
+                var userpassword=prompt("Введите пароль");
+                i++;
+                };
+                if (password==userpassword) {
+                        alert("секретная инфа: логин " + login + ", пароль " + password);
+                }
+                else { alert("Неверный пароль");
+                };
 		break
 	case login2:
-		alert("Логин пойдет");
+		while (userpassword!=password && i<5) {
+                var userpassword=prompt("Введите пароль");
+                i++;
+                };
+                if (password==userpassword) {
+                        alert("секретная инфа: логин " + login + ", пароль " + password);
+                }
+                else { alert("Неверный пароль");
+                };
 		break
 	case login3:
-		alert("Логин не очень, но так и быть");
+		 while (userpassword!=password && i<5) {
+                var userpassword=prompt("Введите пароль");
+                i++;
+                };
+                if (password==userpassword) {
+                        alert("секретная инфа: логин " + login + ", пароль " + password);
+                }
+                else { alert("Неверный пароль");
+                };
 		break
-	default:
-		alert("логин неверен");
+	default: alert("Неверный логин");       
 		break
-};
-if (login==login1) {
-        while (userpassword!=password && i<5) {
-                var userpassword=prompt("Введите пароль");
-                i++;
-                };
-                if (password==userpassword) {
-                        alert("секретная инфа: логин " + login + ", пароль " + password);
-                }
-                else { alert("Неверный пароль");
-                }                        
-};
-if (login==login2) {
-        while (userpassword!=password && i<5) {
-                var userpassword=prompt("Введите пароль");
-                i++;
-                };
-                if (password==userpassword) {
-                        alert("секретная инфа: логин " + login + ", пароль " + password);
-                }
-                else { alert("Неверный пароль");
-                }                        
-};
-if (login==login3) {
-        while (userpassword!=password && i<5) {
-                var userpassword=prompt("Введите пароль");
-                i++;
-                };
-                if (password==userpassword) {
-                        alert("секретная инфа: логин " + login + ", пароль " + password);
-                }
-                else { alert("Неверный пароль");
-                }                        
 };
 
 	
