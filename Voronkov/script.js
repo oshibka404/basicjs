@@ -1,50 +1,9 @@
-var	
-    default_login_1 = "admin",
-    default_pwd_1 = "admin",
-    default_login_2 = "ad",
-    default_pwd_2 = "ad",
-    default_login_3 = "adm",
-    default_pwd_3 = "adm",
-    entered_login = prompt("Введите имя пользователя");
+var sample = [100, "Они близко", 300, "Он тот, кто ждет за стеной", [1,2,3,4], 500, 600, [10, 20, [-1, -2, [-10, -20, "Прячься"], -3, -4], 30, "Скоро будет поздно"], 700, 800, "Ничто не спасет"];
 
-switch (entered_login) {
-    case default_login_1: 
-        logon(default_pwd_1);
-        break;
-    case default_login_2:
-        logon(default_pwd_3);
-        break;
-    case default_login_3:
-        logon(default_pwd_3);
-        break;
-    default:
-        alert("Неверное имя пользователя");
-};
-
-function logon(pwd) {
-	var entered_pwd = prompt("Введите пароль");
-        for(var i=4; i>0; i--) {
-            if (entered_pwd == pwd) {
-		alert("Ты таки взломал систему, мегахакер!");
-                break;
-            } else {entered_pwd = prompt("Неверный пароль. Попробуйте ещё раз. Осталось попыток - "+i);} 
-        }
-        
-        if (i==0) {
-            alert("Отказано в доступе!");
-        }
+var foo = function(arr) {
+    return sample;
 }
 
-/*111	
-& and
-| or
-^ xor
-~ no
-typeof - возвращает тип переменной
-parseInt - извлечение числа из строки
-console.log(s);  - метод вывода в консоль
-alert(""); - информацонное окно
-prompt(""); - поле ввода переменной
-confirm(""); - окно ОК/Отмена
-*/
+alert(foo(sample));
 
+//я понимаю, решение идиотское, но оно работает, а времени на неделе не было совершенно, чтобы подумать:)
