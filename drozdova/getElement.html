@@ -10,12 +10,14 @@
     <a href="http://yahoo.com">Y!</a>
 </div>
 <script>
-var links =
-document.getElementsByTagName('a');
-for (var i=0; i<links.length; i++) {
+var links = document.getElementsByTagName('a');
+for (var i=0; i<links.length-1; i++) {
     links[i].href = "#"; 
 };
-document.getElementById('secondcontainer').innerHTML = "Yahoo!";
+var link_text = document.getElementsByTagName('a');
+for (var i=2; i<links.length; i++) {
+    link_text[i].innerHTML = "Yahoo"; 
+};
 </script>
 </body>
 </html>
