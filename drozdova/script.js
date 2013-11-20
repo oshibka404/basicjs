@@ -1,34 +1,25 @@
 var login1="Nastya";
-var login2="Masha";
-var login3="Dasha"
+var login2="Katya";
+var login3="Natasha"
 var login = prompt("Ввведите имя")
 var password="qwerty123";
 var i=0;
 switch (login) {
 	case login1:
-	 while (userpassword!=password && i<5) {
-                var userpassword=prompt("Введите пароль");
-                i++;
-                };
-                if (password==userpassword) {
-                        alert("секретная инфа: логин " + login + ", пароль " + password);
-                }
-                else { alert("Неверный пароль");
-                };
+	alert("Логин хороший");
 		break
 	case login2:
-		while (userpassword!=password && i<5) {
-                var userpassword=prompt("Введите пароль");
-                i++;
-                };
-                if (password==userpassword) {
-                        alert("секретная инфа: логин " + login + ", пароль " + password);
-                }
-                else { alert("Неверный пароль");
-                };
+		alert("Логин пойдет");
 		break
 	case login3:
-		 while (userpassword!=password && i<5) {
+		alert("Логин не очень, но так и быть");
+		break
+	default:
+		alert("логин неверен");
+		break
+};
+if (login==login1 || login==login2 || login==login3) {
+        while (userpassword!=password && i<5) {
                 var userpassword=prompt("Введите пароль");
                 i++;
                 };
@@ -36,10 +27,8 @@ switch (login) {
                         alert("секретная инфа: логин " + login + ", пароль " + password);
                 }
                 else { alert("Неверный пароль");
-                };
-		break
-	default: alert("Неверный логин");       
-		break
+                }                        
 };
+
 
 	
