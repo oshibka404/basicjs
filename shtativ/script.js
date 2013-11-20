@@ -1,15 +1,16 @@
 var a,
-    b;
-      
+    b,
+    c;
 a = prompt ("Enter your username");
-	if (a == "root") {
-b = prompt ("Enter your password");
-   		}
-	if (b == "pass") {
-	alert ("=======secret info=========");
-		}
-	else {
-		alert ("You are not logged");
-	}
-	
-		
+if ( a == "root" ) {
+    for ( c = 5; c > 0; c-- ) {
+        b = prompt("Enter your password. There are " + c + " trys");
+        
+        if ( b == "pass" ) {
+            alert ("=======secret info=========");
+            break;
+        }
+    }
+} else {
+    alert ("You are not logged");}
+
