@@ -1,19 +1,24 @@
 var log = "adm";
 var pass = "pass";
-
+var i = 0;
 var inLog = prompt("Введите Ваш логин");
 
 
 if (inLog == log){
-	var inPass = prompt("Введите Ваш пароль");
-	if(inPass == pass)
-	{
-		alert("сверхсекретные данные");
+	do{
+		var inPass = prompt("Введите Ваш пароль");
+		if(inPass == pass)
+		{
+			alert("сверхсекретные данные");
+			break;
+		}
+		else 
+		{
+			alert("Неверный пароль");
+			i++;
+		}
 	}
-	else 
-	{
-		alert("Неверный пароль");
-	}
+	while (i<5);
 }
 else
 {
