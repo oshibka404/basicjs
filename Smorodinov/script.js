@@ -1,5 +1,5 @@
-
 autorization();
+
 
 function autorization(){
 	var count = 5;

@@ -19,11 +19,14 @@ var foo = function(arr) {
     	if (arr[i] instanceof Array){
     		str = str + foo(arr[i]);
     	}
-    	else {
+    	else { 
     		str = str + arr[i] + ",";
+            //if (i != (arr.length - 1)) {
+            //    str = str + ", "
+            //}
     	}
     }
-    return str.slice(0,-1);
+    return str;
 }
 
 alert(foo(sample));
