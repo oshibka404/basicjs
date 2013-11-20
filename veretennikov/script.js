@@ -3,12 +3,18 @@ var n;
 for (i=0; i<5; i++)
 {
 	var login = prompt("Enter login");
-	if (login=='123') 
+	switch (login) {
+    case "admin": 
+        alert("Ты не админ, я знаю");
+    case "user":
+        alert("Ну заходи");        
+    default:
+        if (login=='123') 
 	{
 		for (n=0; n<5; n++)
 		{
 			var pass = prompt("Enter password");
-			if (pass=='123') {alert ('Секретная информация'); break;}
+			if (pass=='321') {alert ('Секретная информация'); break;}
 			if (n>=4) {alert ('Ошибка авторизации');}
 		}
 	}
@@ -16,3 +22,7 @@ for (i=0; i<5; i++)
 	if (pass=='321') break;
 	if (n>=4) break;
 }
+	if (pass=='321') break;
+} 
+
+
