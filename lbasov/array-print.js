@@ -16,4 +16,4 @@ var printArray = function(ar) {
     return elements;
 };
 
-alert(printArray(sample));
+//alert(printArray(sample));
