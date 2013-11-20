@@ -10,12 +10,7 @@ var foo = function(arg) {
 
     for (var i = 0; i < arg.length; i++) {
 
-        var ch;
-        if (i != arg.length - 1) {
-            ch = ", "; 
-        } else { 
-            ch = "";
-        }
+        var ch = i != (arg.length - 1) ? ", " : "";
 
         if (arg[i] instanceof Array) {
             result += foo(arg[i]) + ch;
