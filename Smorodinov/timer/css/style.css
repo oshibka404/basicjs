@@ -1,0 +1,55 @@
+body{
+	font-size: 0px;
+}
+
+.timerForm fieldset{
+  width: 300px;
+  
+  border:2px dashed #4882B2;
+}
+
+legend{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-family: arial;
+  color: black;
+  
+  text-align: center;
+  background-color: white;
+}
+
+.timerForm input.food{
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  
+  text-align: center;
+  color: white;
+  font-family: arial;
+  font-size: 16px;
+  
+  background-color: #6FA8DD;
+  border: 1px solid #6FA8DD;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
+  outline: none;
+}
+
+.textBox{
+	width: 250px;
+	margin: 0 auto;
+	min-height: 25px;
+	margin-top: 20px;
+  	margin-bottom: 10px;
+
+  	text-align: center;
+  	color: black;
+  	font-size: 18px;
+  	font-family: arial;
+}

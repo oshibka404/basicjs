@@ -1,5 +1,11 @@
+document.body.onload = function() {
+	document.getElementById('container').innerText = 'OLOLO';
+}
 
 
+
+
+//Замена текста в дивах
 var cont = document.getElementById('container');
 var links = cont.getElementsByTagName('a');
 
@@ -12,7 +18,6 @@ var secCont = document.getElementById('secondContainer');
 secCont.innerHTML = "<a href='http://yahoo.com'>Yahoo!</a>";
 
 
-/*
 
 //Обращение к документу
 
