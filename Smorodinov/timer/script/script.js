@@ -17,11 +17,14 @@ function clock (){
 
 function start() {
 
-//	setClock();
+//	setClock();  - запилить часы
 
 	var eggLightClick = document.getElementById('eggLight');
 	if (eggLightClick.addEventListener) {
 		eggLightClick.addEventListener('click', function() { 
+			var text = document.getElementById('textBox');
+			text.setAttribute("style","color: black");
+
 			stopTime = new Date();
 
 			stopTime = new Date(stopTime.getTime()+10000);
@@ -112,5 +115,5 @@ function alarm() {
 	text.setAttribute("style","background-color: red; color: white; font-weight: bold");
 	//добавить звуковой сигнал
 	alert("Загляни-ка на кухню!");
-	text.setAttribute("style","background-color: transparent; color: black; font-weight: normal");
+	text.setAttribute("style","background-color: transparent; color: grey; font-weight: normal");
 }
