@@ -17,7 +17,7 @@ function clock (){
 
 function start() {
 
-//	setClock();  - запилить часы
+	//setClock();  //- запилить часы
 
 	var eggLightClick = document.getElementById('eggLight');
 	if (eggLightClick.addEventListener) {
@@ -36,6 +36,8 @@ function start() {
 	var eggHardClick = document.getElementById('eggHard');
 	if (eggHardClick.addEventListener) {
 		eggHardClick.addEventListener('click', function() { 
+			var text = document.getElementById('textBox');
+			text.setAttribute("style","color: black");
 			stopTime = new Date();
 
 			stopTime = new Date(stopTime.getTime()+20000);
@@ -43,9 +45,12 @@ function start() {
 			counter(stopTime);
 		}, false);
 	}
+
 	var pelmeni = document.getElementById('pelmeni');
 	if (pelmeni.addEventListener) {
 		pelmeni.addEventListener('click', function() { 
+			var text = document.getElementById('textBox');
+			text.setAttribute("style","color: black");
 			stopTime = new Date();
 
 			stopTime = new Date(stopTime.getTime()+70000);
