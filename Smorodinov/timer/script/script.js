@@ -1,5 +1,8 @@
+start();
 
-//Функция часов
+
+//===============================Функция часов
+
 function setClock() {
 	var interval = setInterval(clock, 1000);
 }
@@ -7,52 +10,107 @@ function setClock() {
 function clock (){
 	var current = new Date();
 	var text = document.getElementById('textBox');
-	text.innerHTML = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+	text.innerHTML = getTimeString(current);
 }
 
-
-
-//Обработчик события
+//================================Обработчик события - нажатие на кнопку
 
 function start() {
 
-	setClock();
+//	setClock();
 
 	var eggLightClick = document.getElementById('eggLight');
 	if (eggLightClick.addEventListener) {
 		eggLightClick.addEventListener('click', function() { 
 			stopTime = new Date();
 
-			stopTime = new Date(stopTime.getFullYear(), stopTime.getMonth(), stopTime.getDate(), stopTime.getHours(), stopTime.getMinutes(), stopTime.getSeconds()+10);
+			stopTime = new Date(stopTime.getTime()+10000);
 
-			counter();
+			counter(stopTime);
 		 }, false);
 	}
 
 	var eggHardClick = document.getElementById('eggHard');
 	if (eggHardClick.addEventListener) {
-		eggHardClick.addEventListener('click', function() { counter(20) }, false);
+		eggHardClick.addEventListener('click', function() { 
+			stopTime = new Date();
+
+			stopTime = new Date(stopTime.getTime()+20000);
+
+			counter(stopTime);
+		}, false);
 	}
 	var pelmeni = document.getElementById('pelmeni');
 	if (pelmeni.addEventListener) {
-		pelmeni.addEventListener('click', function() { counter(70) }, false);
+		pelmeni.addEventListener('click', function() { 
+			stopTime = new Date();
+
+			stopTime = new Date(stopTime.getTime()+70000);
+
+			counter(stopTime);
+		}, false);
 	}
 
 }
 
-//Функция счётчика
+//========================================Функция счётчика
 
-function counter() {
+function counter(stopTime) {
 
 	var now = new Date();
 	var diff = new Date(stopTime - now);
 
-	if (stopTime < now) return;
+	if (stopTime < now) {
+		alarm();
+		return;
+	}
 
 	var text = document.getElementById('textBox');
-	text.innerHTML =  "Осталось: " + diff.getMinutes() + ":" + diff.getSeconds(); //Сделать другой вывод через GetTimeString
-	setTimeout(counter,1000);
-
+	text.innerHTML =  "Осталось: " +  getTimeStringMin(diff);
+	setTimeout('counter(stopTime)',1000);
 }
 
-start();
+//===========================================Две функции - вывод времени в виде строки
+function getTimeString(dateTime) {
+	var timeString;
+	var hours = dateTime.getHours();
+	if (hours < 10) {
+		hours = "0" + hours;
+	}
+	var min = dateTime.getMinutes();
+	if (min < 10) {
+		min = "0" + min;
+	}
+	var sec = dateTime.getSeconds();
+	if (sec < 10) {
+		sec = "0" + sec;
+	}
+	return timeString = hours + ":" + min + ":" + sec;
+}
+
+function getTimeStringMin(dateTime) {
+	var timeString;
+	var min = dateTime.getMinutes();
+	if (min < 10) {
+		min = "0" + min;
+	}
+	var sec = dateTime.getSeconds();
+	if (sec < 10) {
+		sec = "0" + sec;
+	}
+	return timeString = min + ":" + sec;
+}
+
+//============================================Функция вывода сообщения
+function alarm() {
+
+	/*
+	Здесь также планировалось мигание текста (кпасный-белый) в течение пяти секунд со звуком, затем показ алерта.
+	*/
+
+	var text = document.getElementById('textBox');
+	text.setAttribute("style","background-color: red; color: white; font-weight: bold");
+	//добавить звуковой сигнал
+	alert("Загляни-ка на кухню!");
+	text.setAttribute("style","background-color: transparent; color: black; font-weight: normal");
+}
