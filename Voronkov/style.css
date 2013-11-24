@@ -1,0 +1,17 @@
+   .select { 
+      width: 200px; 
+      background: #ccc;
+      padding: 5px;
+      padding-right: 20px; 
+      border: solid 1px black; 
+      float: left;
+   }
+   
+   .write_time {
+      width: 200px; 
+      background: #ccc;
+      padding: 5px;
+      padding-right: 20px; 
+      border: solid 1px black; 
+   }
+
