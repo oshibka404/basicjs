@@ -1,0 +1,175 @@
+﻿<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <title>Таймер</title>
+    <script>
+        
+        function timer() {
+            document.getElementById('button').disabled = true;
+                var timerId = setInterval(function() {
+                var countsec = document.getElementById('pelm');
+                var countmin  = document.getElementById('pelm2');
+                var finpelm = document.getElementById('fin_pelm');
+                var audio = document.getElementById('audio');
+                countsec.innerHTML--;
+                 if (countsec.innerHTML<0) {
+                     countsec.innerHTML=59;
+                         if (countmin.innerHTML>0) {countmin.innerHTML--;}
+                         else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finpelm.innerHTML = "Пельмени готовы!"; audio.play();};
+                };
+                } , 1000);
+        return;
+        };
+        
+        function timer1() {
+            document.getElementById('button1').disabled = true;
+                var timerId = setInterval(function() {
+                var countsec = document.getElementById('egg');
+                var countmin  = document.getElementById('egg2');
+                var finegg = document.getElementById('finegg');
+                var audio = document.getElementById('audio');
+                countsec.innerHTML--;
+                    if (countsec.innerHTML<0) {
+                    countsec.innerHTML=59;
+                         if (countmin.innerHTML>0) {countmin.innerHTML--;}
+                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg.innerHTML = "Яйцо готово!"; audio.play();};
+                    };
+                } , 1000);
+        return;
+        };
+        
+        function timer2() {
+            document.getElementById('button2').disabled = true;
+                var timerId = setInterval(function() {
+                var countsec = document.getElementById('egg_');
+                var countmin  = document.getElementById('egg_2');
+                var finegg_ = document.getElementById('finegg_');
+                var audio = document.getElementById('audio');
+                countsec.innerHTML--;
+                    if (countsec.innerHTML<0) {
+                    countsec.innerHTML=59;
+                        if (countmin.innerHTML>0) {countmin.innerHTML--;}
+                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg_.innerHTML = "Яйцо готово!!"; audio.play();};
+                    };
+                } , 1000);
+        return;
+        };
+</script>
+    <style>
+        html  {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .fl {
+            float: left;
+        }
+        .ml60 {
+            margin: 30px 0 0 60px;
+        }
+        .ml65 {
+            margin-left: 65px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16pt;
+            background: #fff;
+        }
+       
+        #button, #button1, #button2  {
+            background: url('https://dl.dropboxusercontent.com/s/88bwolwcbw1dxn2/%D0%BF%D0%B5%D0%BB%D1%8C%D0%BC%D0%B5%D1%88%D0%BA%D0%B8.png?token_hash=AAFORagsPCCUe6Uubnmdzpgv5fDM_cgxC357ZhxNbr1Cjw') no-repeat;
+            width: 174px;
+            height: 55px;
+            cursor: pointer;
+            color: #fff;
+            text-shadow: 0 1px 0 #ffc38f;
+            border: none;
+            font-size: 14pt;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        #button:hover {
+           
+            border: none ;
+        }
+        #button:active {
+
+            border: none;
+        }
+
+#header {
+    background: url('https://dl.dropboxusercontent.com/s/0sg8b61tbf74jde/header.png?token_hash=AAEb0gtoGz50km6s5vB3-tnZyrjZh6RIJNOg7Q3Ez6TyHg') repeat-x;
+    height: 92px;
+    font-family: 'Lobster', cursive;
+    font-size: 20pt;
+
+}
+.mauto {
+    padding: 20px;
+    margin-left: 45%;
+}
+.ml30 {
+    margin: 30px 0 0 26%;
+    
+}
+#container {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+#finegg, #finegg_ {
+    margin-left: 30px;
+}
+#finpelm {
+    margin-left: 10px;
+}
+        </style>
+</head>
+<body>
+    <audio id='audio' src="Toasty.mp3">
+        </audio>
+    <div id='container'>
+        <div id="header"><div class='mauto'>Таймер</div></div>
+        <div class="fl ml30">
+    <div> <input id="button" type="button" onclick="timer()" value="Пельмени"/></div>
+      <div class="fl ml65" id="pelm2">
+    12
+</div>
+ <div class="fl">:</div>   
+    <div id="pelm">
+    00
+</div>
+ <div id="fin_pelm">
+     </div>
+ </div>
+    <div class="fl ml60">
+  <div> <input id="button1" type="button" onclick="timer1()" value="Яйцо всмятку"/></div>
+      <div class="fl ml65" id="egg2">
+    2
+</div>
+ <div class="fl">:</div>   
+    <div id="egg">
+    00
+</div>
+ <div id="finegg">
+     </div>
+ </div>
+    <div class="fl ml60">
+  <div> <input id="button2" type="button" onclick="timer2()" value="Яйцо вкрутую"/></div>
+      <div class="fl ml65" id="egg_2">
+    8
+</div>
+ <div class="fl">:</div>   
+    <div id="egg_">
+    00
+</div>
+ <div id="finegg_">
+     </div>
+</div>
+    </div>
+</body>
+</html>
