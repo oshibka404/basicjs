@@ -1,7 +1,8 @@
-<html>
+п»ї<html>
 <head>
     <link href='http://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-   <title>Таймер</title>
+  <meta charset="utf-8">
+  <title>РўР°Р№РјРµСЂ</title>
     <script>
         
         function timer() {
@@ -15,7 +16,7 @@
                  if (countsec.innerHTML<0) {
                      countsec.innerHTML=59;
                          if (countmin.innerHTML>0) {countmin.innerHTML--;}
-                         else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finpelm.innerHTML = "Пельмени готовы!"; audio.play();};
+                         else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finpelm.innerHTML = "РџРµР»СЊРјРµРЅРё РіРѕС‚РѕРІС‹!"; audio.play();};
                 };
                 } , 1000);
         return;
@@ -32,7 +33,7 @@
                     if (countsec.innerHTML<0) {
                     countsec.innerHTML=59;
                          if (countmin.innerHTML>0) {countmin.innerHTML--;}
-                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg.innerHTML = "Яйцо готово!"; audio.play();};
+                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg.innerHTML = "РЇР№С†Рѕ РіРѕС‚РѕРІРѕ!"; audio.play();};
                     };
                 } , 1000);
         return;
@@ -49,7 +50,7 @@
                     if (countsec.innerHTML<0) {
                     countsec.innerHTML=59;
                         if (countmin.innerHTML>0) {countmin.innerHTML--;}
-                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg_.innerHTML = "Яйцо готово!"; audio.play();};
+                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg_.innerHTML = "РЇР№С†Рѕ РіРѕС‚РѕРІРѕ!!"; audio.play();};
                     };
                 } , 1000);
         return;
@@ -132,9 +133,9 @@
     <audio id='audio' src="Toasty.mp3">
         </audio>
     <div id='container'>
-        <div id="header"><div class='mauto'>Таймер</div></div>
+        <div id="header"><div class='mauto'>РўР°Р№РјРµСЂ</div></div>
         <div class="fl ml30">
-    <div> <input id="button" type="button" onclick="timer()" value="Пельмени"/></div>
+    <div> <input id="button" type="button" onclick="timer()" value="РџРµР»СЊРјРµРЅРё"/></div>
       <div class="fl ml65" id="pelm2">
     12
 </div>
@@ -146,7 +147,7 @@
      </div>
  </div>
     <div class="fl ml60">
-  <div> <input id="button1" type="button" onclick="timer1()" value="Яйцо всмятку"/></div>
+  <div> <input id="button1" type="button" onclick="timer1()" value="РЇР№С†Рѕ РІСЃРјСЏС‚РєСѓ"/></div>
       <div class="fl ml65" id="egg2">
     2
 </div>
@@ -158,7 +159,7 @@
      </div>
  </div>
     <div class="fl ml60">
-  <div> <input id="button2" type="button" onclick="timer2()" value="Яйцо вкрутую"/></div>
+  <div> <input id="button2" type="button" onclick="timer2()" value="РЇР№С†Рѕ РІРєСЂСѓС‚СѓСЋ"/></div>
       <div class="fl ml65" id="egg_2">
     8
 </div>
