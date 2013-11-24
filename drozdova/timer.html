@@ -3,17 +3,19 @@
     <link href='http://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
    <title>Таймер</title>
     <script>
+        
         function timer() {
             document.getElementById('button').disabled = true;
                 var timerId = setInterval(function() {
                 var countsec = document.getElementById('pelm');
                 var countmin  = document.getElementById('pelm2');
                 var finpelm = document.getElementById('fin_pelm');
+                var audio = document.getElementById('audio');
                 countsec.innerHTML--;
                  if (countsec.innerHTML<0) {
                      countsec.innerHTML=59;
                          if (countmin.innerHTML>0) {countmin.innerHTML--;}
-                         else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finpelm.innerHTML = "Пельмени готовы!" ;};
+                         else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finpelm.innerHTML = "Пельмени готовы!"; audio.play();};
                 };
                 } , 1000);
         return;
@@ -25,11 +27,12 @@
                 var countsec = document.getElementById('egg');
                 var countmin  = document.getElementById('egg2');
                 var finegg = document.getElementById('finegg');
+                var audio = document.getElementById('audio');
                 countsec.innerHTML--;
                     if (countsec.innerHTML<0) {
                     countsec.innerHTML=59;
                          if (countmin.innerHTML>0) {countmin.innerHTML--;}
-                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg.innerHTML = "Яйцо готово!";};
+                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg.innerHTML = "Яйцо готово!"; audio.play();};
                     };
                 } , 1000);
         return;
@@ -41,11 +44,12 @@
                 var countsec = document.getElementById('egg_');
                 var countmin  = document.getElementById('egg_2');
                 var finegg_ = document.getElementById('finegg_');
+                var audio = document.getElementById('audio');
                 countsec.innerHTML--;
                     if (countsec.innerHTML<0) {
                     countsec.innerHTML=59;
                         if (countmin.innerHTML>0) {countmin.innerHTML--;}
-                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg_.innerHTML = "Яйцо готово!";};
+                        else {countsec.innerHTML = countmin.innerHTML = 0; clearInterval(timerId); finegg_.innerHTML = "Яйцо готово!"; audio.play();};
                     };
                 } , 1000);
         return;
@@ -125,6 +129,8 @@
         </style>
 </head>
 <body>
+    <audio id='audio' src="Toasty.mp3">
+        </audio>
     <div id='container'>
         <div id="header"><div class='mauto'>Таймер</div></div>
         <div class="fl ml30">
