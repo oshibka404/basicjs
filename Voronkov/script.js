@@ -1,9 +1,58 @@
-var sample = [100, "Они близко", 300, "Он тот, кто ждет за стеной", [1,2,3,4], 500, 600, [10, 20, [-1, -2, [-10, -20, "Прячься"], -3, -4], 30, "Скоро будет поздно"], 700, 800, "Ничто не спасет"];
+var allo_egg1 = document.getElementById('egg1'),
+    allo_egg2 = document.getElementById('egg2'),
+    allo_pilman = document.getElementById('pilman'),
+    allo_write_time = document.getElementById('timer');
 
-var foo = function(arr) {
-    return sample;
+allo_egg1.addEventListener('click', timer_egg1, false);
+allo_egg2.addEventListener('click', timer_egg2, false);
+allo_pilman.addEventListener('click', timer_pilman, false);
+
+function timer_egg1() {
+    var time = 300;
+    var interval_egg1 = setInterval(timer, 1000);
+    function timer() {
+        time-=1;
+        min = Math.floor(time/ 60);
+        sek = time % 60;
+        allo_write_time.textContent = min+":"+sek;
+        if (time == 0) {
+            allo_egg1.style.background = "#ff0000";
+            allo_write_time.style.background = "#ff0000";
+            clearInterval(interval_egg1);
+        }
+    }
 }
 
-alert(foo(sample));
+function timer_egg2() {
+    var time = 600;
+    var interval_egg2 = setInterval(timer, 1000);
+    allo_egg1_timer = document.getElementById('egg2_timer');
+    function timer() {
+        time-=1;
+        min = Math.floor(time/ 60);
+        sek = time % 60;
+        allo_write_time.textContent = min+":"+sek;
+        if (time == 0) {
+            allo_egg2.style.background = "#ff0000";
+            allo_write_time.style.background = "#ff0000";
+            clearInterval(interval_egg2);
+        }
+    }
+}
 
-//я понимаю, решение идиотское, но оно работает, а времени на неделе не было совершенно, чтобы подумать:)
+function timer_pilman() {
+    var time = 330;
+    var interval_pilman = setInterval(timer_p, 1000);
+    allo_egg1_timer = document.getElementById('pilman_timer');
+    function timer_p() {
+        time-=1;
+        min = Math.floor(time/ 60);
+        sek = time % 60;
+        allo_write_time.textContent = min+":"+sek;
+        if (time == 0) {
+            allo_pilman.style.background = "#ff0000";
+            allo_write_time.style.background = "#ff0000";
+            clearInterval(interval_pilman);
+        }
+    }
+}
