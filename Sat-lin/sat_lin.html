@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JavaScript kurs</title>
+        <title>JavaScript</title>
         <meta charset="UTF-8">
+        <style>
+		.main{
+			width:100%;
+			height:100%;
+		}
+		.window-timer{
+		width:400px;
+		border:1px solid;
+		font-size:70px;
+		padding:40px;	
+			}
+		.hello{
+			color:red;
+			font-size:36px;
+			background-color:#666;
+			}	
+		</style>
     </head>
     <body>
-        <script src="Voronkov/script.js"></script>
+    <div align="center" class="main">
+        <div class='window-timer'>
+        <div id='timer'>
+     0:0:0  
+     </div>
+       <div class='button'>
+       <input type="button" value="яйцо в смятку" onClick="eggs_smash()" />
+       <input type="button" value="яйцо в крутую" onClick="eggs_hard()" />
+       <input type="button" value="пельмени" onClick="pelmeni()"/>
+       </div>
+       </div>
+    </div>
+    <script src="script2.js"></script>
     </body>
 </html>
