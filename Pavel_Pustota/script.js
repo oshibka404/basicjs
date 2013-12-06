@@ -1,13 +1,10 @@
-﻿function go() {
-	var interval = setInterval(sayHi, 10000);
-}
-function go2() {
-	var timeout = setTimeout(sayHi, 2000);
+﻿var container = document.getElementById('container');
+var secondcontainer = document.getElementById('secondcontainer');
+var links = container.getElementsByTagName('a');
+var link = secondcontainer.getElementsByTagName('a');
+
+for (var i = 0; i < links.length; i++) {
+	links[i].href = '#';
 }
 
-function sayHi() {
-	var current = new Date();
-	alert(current.getSeconds()+':'+current.getMinutes()+':'+current.getHours()+' '+current.getDay()+'.'+current.getMonth()+' '+current.getFullYear()+' года');
-}
-
-go();
+link[0].innerHTML = 'sdfvasdadsc';
